@@ -9,6 +9,7 @@ public class SIS
 			{
 				String file1 = "StudentList.txt"; 
 				ArrayList <Student> list = new ArrayList <Student>();
+
 				try
 					{
 						Scanner myFile = new Scanner (new File("StudentList.txt"));
@@ -30,6 +31,7 @@ public class SIS
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+
 				
 			}
 
