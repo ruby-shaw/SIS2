@@ -1,11 +1,13 @@
-
+import java.io.File;
+import java.util.ArrayList; 
 public class SIS
 	{
 
 		public static void main(String[] args)
 			{
-				// TODO Auto-generated method stub
-				System.out.print("YO");
+				String file = "StudentList.txt"; 
+				ArrayList <Student> list = new ArrayList <Student>();
+				
 				
 			}
 
