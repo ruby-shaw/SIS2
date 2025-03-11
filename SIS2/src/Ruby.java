@@ -3,6 +3,6 @@ public class Ruby
 {
 	public static void saysSomething()
 	{
-		System.out.println("Say something");
+		System.out.println("Hello");
 	}
 }
