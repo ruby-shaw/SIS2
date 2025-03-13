@@ -7,18 +7,18 @@ import java.text.DecimalFormat;
 
 public class GpaCalculator
 	{
-		
-		public static void typeOfA()
+		public static void whatTypeOfA()
 		{
-			if ()
-				{}
+			
+		switch(SIS.roster.get(SIS.counter).getGrade1())
+		{
+			
+			
+			
+			
+			
 		}
-		public static void typeOfB()
-		{}
-		public static void typeOfC()
-		{}
-		public static void typeOfD()
-		{}
-		public static void typeOfF()
-		{}
+		
+		
+		}
 	}
