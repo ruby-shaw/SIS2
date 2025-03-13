@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class SIS
 	{
-	public static ArrayList <Student> list = new ArrayList <Student>();
+	public static ArrayList <Student> roster = new ArrayList <Student>();
 	public static Scanner user= new Scanner (System.in);
 		public static void main(String[] args)
 			{
@@ -24,10 +24,10 @@ public class SIS
 					Scanner myFile = new Scanner (new File("StudentList.txt"));
 					while(myFile.hasNext())
 						{
-							list.add(new Student(myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
+							roster.add(new Student(myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
 							
 						}
-					for (Student k : list)
+					for (Student k : roster)
 						{
 							System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 						}
@@ -125,7 +125,7 @@ public class SIS
 			Scanner userDel = new Scanner(System.in);
 			System.out.println("Pick a student to delete");
 			int pickDelete= userDel.nextInt();
-			for (int d=0; d<list.size(); d++)
+			for (int d=0; d<roster.size(); d++)
 				{   
 					
 				}
