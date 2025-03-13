@@ -8,7 +8,8 @@ public class SIS
 	public static Scanner user= new Scanner (System.in);
 		public static void main(String[] args)
 			{
-
+fillArray();
+menu();
 			}
 	
 		public static void fillArray()
@@ -113,23 +114,8 @@ public class SIS
 						
 					}	
 			}
-		public static void addStudents()
-
-		{
 			
 		}
 		
-		public static void deleteStudents()
-		{
-			Scanner userDel = new Scanner(System.in);
-			System.out.println("Pick a student to delete");
-			int pickDelete= userDel.nextInt();
-			for (int d=0; d<list.size(); d++)
-				{   
-					
-				}
-			
-		}
 		
-		}
 	
