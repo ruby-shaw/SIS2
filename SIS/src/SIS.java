@@ -2,8 +2,23 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList; 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 public class SIS
 	{
+
+		static ArrayList <Student> roster = new ArrayList <Student>();
+		static int counter = 0;
+		public static void main(String[] args)
+			{
+				String file1 = "StudentList.txt"; 
+		
+
+				//for loop through get grade use if else to add a certain number to gpa
+				// make a seperate array list for gpa ):
+				// 
+		
+				try
+
 	public static ArrayList <Student> list = new ArrayList <Student>();
 	public static Scanner user= new Scanner (System.in);
 		public static void main(String[] args)
@@ -49,6 +64,7 @@ public class SIS
 				System.out.println("3) Sort Students");
 				int choice= user.nextInt();
 				if (choice ==1)
+
 					{
 						System.out.println("Pick one");
 						System.out.println("1) Add a Student");
@@ -56,6 +72,31 @@ public class SIS
 						int addOrDeleteChoice=user.nextInt();
 						if (addOrDeleteChoice==1)
 							{
+
+								roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
+								
+							}
+						GpaCalculator.whatTypeOfA();
+						for (int i = 0; i<roster.size();i++)
+							{
+								if (roster.get(i).getGrade1().equals("A")|| roster.get(i).getGrade1().equals("A-")||roster.get(i).getGrade1().equals("A+"))
+									{
+									
+									}
+							counter++;
+							}
+						
+						for (Student k : roster)
+							{
+								System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+								
+							}
+						System.out.println(roster.size());
+						
+						
+						
+					} catch (FileNotFoundException e)
+
 								System.out.println("Link add students method");
 							}
 						else if (addOrDeleteChoice==2)
@@ -69,6 +110,7 @@ public class SIS
 						
 					}
 				else if (choice ==2)
+
 					{
 						System.out.println("Pick one");
 						System.out.println("1) Change grade");
@@ -88,6 +130,7 @@ public class SIS
 							}
 						
 					}
+
 				else if (choice ==3)
 					{
 						System.out.println("Pick one");
@@ -113,8 +156,13 @@ public class SIS
 							}
 						
 					}	
+
 			}
 		public static void addStudents()
+
+
+		
+	}
 
 		{
 			
