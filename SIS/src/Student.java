@@ -11,12 +11,12 @@ public class Student
 		private String period3;
 		private String grade3;
 	
-public Student(String f, String l, double gp, String p1, String g1, String p2, String g2, String p3, String g3 )
+public Student(String f, String l, double g, String p1, String g1, String p2, String g2, String p3, String g3 )
 {
 
 	firstName=f;
 	lastName=l;
-	gpa=gp;
+	gpa = g;
 	period1=p1;
 	grade1=g1;
 	period2=p2;
@@ -44,14 +44,15 @@ public void setLastName(String l)
 {
 lastName=l; 	
 }
-public double getGpa()
+public double getGpa(double g)
 {
-	return gpa;
-	
+return gpa; 
 }
-public void setGpa(double gp)
+public void setGpa(double g)
 {
-gpa=gp;	
+	
+gpa=g;
+
 }
 public String getPeriod1()
 {
