@@ -5,7 +5,8 @@ import java.util.Scanner;
 import java.text.DecimalFormat;
 public class SIS
 	{
-
+		static Scanner user= new Scanner (System.in);
+		
 		static ArrayList <Student> roster = new ArrayList <Student>();
 		static int counter = 0;
 		public static void main(String[] args)
@@ -16,17 +17,30 @@ public class SIS
 				//for loop through get grade use if else to add a certain number to gpa
 				// make a seperate array list for gpa ):
 				// 
-		
-				try
+				//GpaCalculator.whatTypeOfA();
+				//for (int i = 0; i<roster.size();i++)
+			//		{
+				//		if (roster.get(i).getGrade1().equals("A")|| roster.get(i).getGrade1().equals("A-")||roster.get(i).getGrade1().equals("A+"))
+				//			{
+							
+				//			}
+			//		counter++;
+				//	}
+				
+			//	for (Student k : roster)
+			//		{
+			//			System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+				//		
+					//}
+				System.out.println(roster.size());
+			
 
-	public static ArrayList <Student> list = new ArrayList <Student>();
-	public static Scanner user= new Scanner (System.in);
-		public static void main(String[] args)
-			{
+	
+	
 fillArray();
 menu();
+			
 			}
-	
 		public static void fillArray()
 
 		{
@@ -39,10 +53,10 @@ menu();
 					Scanner myFile = new Scanner (new File("StudentList.txt"));
 					while(myFile.hasNext())
 						{
-							list.add(new Student(myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
+							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
 							
 						}
-					for (Student k : list)
+					for (Student k : roster)
 						{
 							System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 						}
@@ -73,29 +87,11 @@ menu();
 						if (addOrDeleteChoice==1)
 							{
 
-								roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
 								
-							}
-						GpaCalculator.whatTypeOfA();
-						for (int i = 0; i<roster.size();i++)
-							{
-								if (roster.get(i).getGrade1().equals("A")|| roster.get(i).getGrade1().equals("A-")||roster.get(i).getGrade1().equals("A+"))
-									{
-									
-									}
-							counter++;
-							}
-						
-						for (Student k : roster)
-							{
-								System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 								
-							}
-						System.out.println(roster.size());
+							
 						
-						
-						
-					} catch (FileNotFoundException e)
+					 
 
 								System.out.println("Link add students method");
 							}
@@ -103,7 +99,7 @@ menu();
 							{
 								System.out.println("link delete students method");
 							}
-						else
+						else 
 							{
 								System.out.println("Error, please try again");
 							}
@@ -156,19 +152,10 @@ menu();
 							}
 						
 					}	
-
+				}
 			}
 
-		public static void addStudents()
-
-
-		
-	}
-
-		{
-
-			
-		}
+	
 		
 		
 	
