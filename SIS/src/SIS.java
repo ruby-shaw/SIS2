@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 public class SIS
 	{
 		static Scanner user= new Scanner (System.in);
-		
+		static	double GPA = 0.00;
 		static ArrayList <Student> roster = new ArrayList <Student>();
 		static int counter = 0;
 		public static void main(String[] args)
@@ -17,21 +17,8 @@ public class SIS
 				//for loop through get grade use if else to add a certain number to gpa
 				// make a seperate array list for gpa ):
 				// 
-				//GpaCalculator.whatTypeOfA();
-				//for (int i = 0; i<roster.size();i++)
-			//		{
-				//		if (roster.get(i).getGrade1().equals("A")|| roster.get(i).getGrade1().equals("A-")||roster.get(i).getGrade1().equals("A+"))
-				//			{
-							
-				//			}
-			//		counter++;
-				//	}
 				
-			//	for (Student k : roster)
-			//		{
-			//			System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
-				//		
-					//}
+			
 				System.out.println(roster.size());
 			
 
