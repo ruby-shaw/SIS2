@@ -3,17 +3,18 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList; 
 import java.util.Scanner;
 import java.text.DecimalFormat;
+
 public class SIS
 	{
-<<<<<<< HEAD
+
 	public static ArrayList <Student> roster = new ArrayList <Student>();
 	public static Scanner user= new Scanner (System.in);
-=======
-		static Scanner user= new Scanner (System.in);
+
+
 		static	double GPA = 0.00;
-		static ArrayList <Student> roster = new ArrayList <Student>();
+
 		static int counter = 0;
->>>>>>> upstream/master
+
 		public static void main(String[] args)
 			{
 				String file1 = "StudentList.txt"; 
@@ -29,8 +30,8 @@ public class SIS
 
 	
 	
-fillArray();
-menu();
+					fillArray();
+					menu();
 			
 			}
 		public static void fillArray()
@@ -45,11 +46,9 @@ menu();
 					Scanner myFile = new Scanner (new File("StudentList.txt"));
 					while(myFile.hasNext())
 						{
-<<<<<<< HEAD
+
 							roster.add(new Student(myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
-=======
 							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
->>>>>>> upstream/master
 							
 						}
 					for (Student k : roster)
@@ -153,19 +152,16 @@ menu();
 
 	
 		
-<<<<<<< HEAD
 		public static void deleteStudents()
 		{
 			Scanner userDel = new Scanner(System.in);
 			System.out.println("Pick a student to delete");
 			int pickDelete= userDel.nextInt();
-			for (int d=0; d<roster.size(); d++)
+			for (int d=0; d<SIS.roster.size(); d++)
 				{   
 					
 				}
 			
 		}
-=======
->>>>>>> upstream/master
 		
 	
