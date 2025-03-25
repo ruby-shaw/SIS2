@@ -19,13 +19,9 @@ public class SIS
 				// 
 				
 			
-				System.out.println(roster.size());
-			
-
-	
-	
-fillArray();
-menu();
+				System.out.println(roster.size());	
+					fillArray();
+					menu();
 			
 			}
 		public static void fillArray()
@@ -43,9 +39,11 @@ menu();
 							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
 							
 						}
+					int classNum=0;
 					for (Student k : roster)
 						{
-							System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+							classNum++;
+							System.out.println(classNum+") "+ k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 						}
 					
 					
@@ -59,6 +57,7 @@ menu();
 		}	
 		public static void menu()
 			{
+				System.out.println();
 				System.out.println("What would you like to do?");
 				System.out.println("1) Add or delete student");
 				System.out.println("2) Change students grades or schedules");
@@ -67,29 +66,7 @@ menu();
 				if (choice ==1)
 
 					{
-						System.out.println("Pick one");
-						System.out.println("1) Add a Student");
-						System.out.println("2) Delete a Student");
-						int addOrDeleteChoice=user.nextInt();
-						if (addOrDeleteChoice==1)
-							{
-
-								
-								
-							
-						
-					 
-
-								System.out.println("Link add students method");
-							}
-						else if (addOrDeleteChoice==2)
-							{
-								System.out.println("link delete students method");
-							}
-						else 
-							{
-								System.out.println("Error, please try again");
-							}
+						AddOrRemoveStudent.choose();
 						
 					}
 				else if (choice ==2)
