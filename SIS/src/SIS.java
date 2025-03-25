@@ -2,16 +2,37 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList; 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 public class SIS
 	{
+<<<<<<< HEAD
 	public static ArrayList <Student> roster = new ArrayList <Student>();
 	public static Scanner user= new Scanner (System.in);
+=======
+		static Scanner user= new Scanner (System.in);
+		static	double GPA = 0.00;
+		static ArrayList <Student> roster = new ArrayList <Student>();
+		static int counter = 0;
+>>>>>>> upstream/master
 		public static void main(String[] args)
 			{
+				String file1 = "StudentList.txt"; 
+		
+
+				//for loop through get grade use if else to add a certain number to gpa
+				// make a seperate array list for gpa ):
+				// 
 				
+			
+				System.out.println(roster.size());
+			
 
+	
+	
+fillArray();
+menu();
+			
 			}
-
 		public static void fillArray()
 
 		{
@@ -24,7 +45,11 @@ public class SIS
 					Scanner myFile = new Scanner (new File("StudentList.txt"));
 					while(myFile.hasNext())
 						{
+<<<<<<< HEAD
 							roster.add(new Student(myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
+=======
+							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
+>>>>>>> upstream/master
 							
 						}
 					for (Student k : roster)
@@ -49,6 +74,7 @@ public class SIS
 				System.out.println("3) Sort Students");
 				int choice= user.nextInt();
 				if (choice ==1)
+
 					{
 						System.out.println("Pick one");
 						System.out.println("1) Add a Student");
@@ -56,19 +82,27 @@ public class SIS
 						int addOrDeleteChoice=user.nextInt();
 						if (addOrDeleteChoice==1)
 							{
+
+								
+								
+							
+						
+					 
+
 								System.out.println("Link add students method");
 							}
 						else if (addOrDeleteChoice==2)
 							{
 								System.out.println("link delete students method");
 							}
-						else
+						else 
 							{
 								System.out.println("Error, please try again");
 							}
 						
 					}
 				else if (choice ==2)
+
 					{
 						System.out.println("Pick one");
 						System.out.println("1) Change grade");
@@ -88,6 +122,7 @@ public class SIS
 							}
 						
 					}
+
 				else if (choice ==3)
 					{
 						System.out.println("Pick one");
@@ -113,13 +148,12 @@ public class SIS
 							}
 						
 					}	
+				}
 			}
-		public static void addStudents()
 
-		{
-			
-		}
+	
 		
+<<<<<<< HEAD
 		public static void deleteStudents()
 		{
 			Scanner userDel = new Scanner(System.in);
@@ -131,6 +165,7 @@ public class SIS
 				}
 			
 		}
+=======
+>>>>>>> upstream/master
 		
-		}
 	
