@@ -53,15 +53,12 @@ public class SIS
 						}
 
 					GpaCalculator.Calc();
-					for (Student k : roster)
-						{
-							System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getGpa() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
-
+					
 					int classNum=0;
 					for (Student k : roster)
 						{
 							classNum++;
-							System.out.println(classNum+") "+ k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+							System.out.println(classNum+" "+ k.getFirstName()+ " "+ k.getLastName() + " " +  k.getGpa()+  " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 
 						}
 					
@@ -143,6 +140,6 @@ public class SIS
 
 	
 			
-		}
+		
 
 	
