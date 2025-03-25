@@ -11,30 +11,166 @@ public class GpaCalculator
 		public static void Calc()
 		{
 			
+			
 		for (int i = 0; i<SIS.roster.size();i++)
 			{
-				if (SIS.roster.get(i).getGrade1().equals("A")|| SIS.roster.get(i).getGrade1().equals("A-")||SIS.roster.get(i).getGrade1().equals("A+"))
-					{
+				//if (SIS.roster.get(i).getGrade1().equals("A")|| SIS.roster.get(i).getGrade1().equals("A-")||SIS.roster.get(i).getGrade1().equals("A+"))
+				//	{
 					
-					}
+				//	}
+				whatTypeOfGrade1();
+				whatTypeOfGrade2();
+				whatTypeOfGrade3();
+				SIS.GPA/=3;
+				String num = SIS.cs.format(SIS.GPA);
+				double gpaFr = Double.parseDouble(num);
+				SIS.roster.get(SIS.counter).setGpa(gpaFr);
 				SIS.counter++;
+				SIS.GPA=0;
 			}
 		}
-		public static void whatTypeOfA()
+		public static void whatTypeOfGrade1()
 		{
 			
 			switch(SIS.roster.get(SIS.counter).getGrade1())
 			{
-				case "A":
-				SIS.GPA+=4.00;
 				case "A+":
-					SIS.GPA+=4.00;
-				
-			
-			
-			
+				      SIS.GPA+=4.30;
+				break;
+				case "A":
+				         SIS.GPA+=4.00;
+				break;
+				case "A-":
+					      SIS.GPA+=3.70;
+					break;
+				case "B+":
+				         SIS.GPA+=3.30;
+				break;
+				case "B":
+						SIS.GPA+=3.00;
+				break;
+				case "B-":
+						SIS.GPA+=2.70;
+				break;
+				case "C+":
+			         SIS.GPA+=2.30;
+			    break;
+				case "C":
+					SIS.GPA+=2.00;
+			    break;
+				case "C-":
+					SIS.GPA+=1.70;
+				break;
+				case "D+":
+			         SIS.GPA+=1.30;
+			    break;
+				case "D":
+					SIS.GPA+=1.00;
+			    break;
+				case "D-":
+					SIS.GPA+=0.70;
+				break;
+				case "F":
+					SIS.GPA+=0.00;
+				break;	
 			}
 		
 		
 		}
+		public static void whatTypeOfGrade2()
+			{
+				
+				switch(SIS.roster.get(SIS.counter).getGrade2())
+				{
+					case "A+":
+					      SIS.GPA+=4.30;
+					break;
+					case "A":
+					         SIS.GPA+=4.00;
+					break;
+					case "A-":
+						      SIS.GPA+=3.70;
+						break;
+					case "B+":
+					         SIS.GPA+=3.30;
+					break;
+					case "B":
+							SIS.GPA+=3.00;
+					break;
+					case "B-":
+							SIS.GPA+=2.70;
+					break;
+					case "C+":
+				         SIS.GPA+=2.30;
+				    break;
+					case "C":
+						SIS.GPA+=2.00;
+				    break;
+					case "C-":
+						SIS.GPA+=1.70;
+					break;
+					case "D+":
+				         SIS.GPA+=1.30;
+				    break;
+					case "D":
+						SIS.GPA+=1.00;
+				    break;
+					case "D-":
+						SIS.GPA+=0.70;
+					break;
+					case "F":
+						SIS.GPA+=0.00;
+					break;	
+				}
+			
+			
+			}
+		public static void whatTypeOfGrade3()
+			{
+				
+				switch(SIS.roster.get(SIS.counter).getGrade3())
+				{
+					case "A+":
+					      SIS.GPA+=4.30;
+					break;
+					case "A":
+					         SIS.GPA+=4.00;
+					break;
+					case "A-":
+						      SIS.GPA+=3.70;
+						break;
+					case "B+":
+					         SIS.GPA+=3.30;
+					break;
+					case "B":
+							SIS.GPA+=3.00;
+					break;
+					case "B-":
+							SIS.GPA+=2.70;
+					break;
+					case "C+":
+				         SIS.GPA+=2.30;
+				    break;
+					case "C":
+						SIS.GPA+=2.00;
+				    break;
+					case "C-":
+						SIS.GPA+=1.70;
+					break;
+					case "D+":
+				         SIS.GPA+=1.30;
+				    break;
+					case "D":
+						SIS.GPA+=1.00;
+				    break;
+					case "D-":
+						SIS.GPA+=0.70;
+					break;
+					case "F":
+						SIS.GPA+=0.00;
+					break;	
+				}
+			
+			
+			}
 	}

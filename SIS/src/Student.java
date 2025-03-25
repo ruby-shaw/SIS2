@@ -44,7 +44,7 @@ public void setLastName(String l)
 {
 lastName=l; 	
 }
-public double getGpa(double g)
+public double getGpa()
 {
 return gpa; 
 }

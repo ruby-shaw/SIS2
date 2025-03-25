@@ -9,8 +9,10 @@ public class SIS
 		static	double GPA = 0.00;
 		static ArrayList <Student> roster = new ArrayList <Student>();
 		static int counter = 0;
+		static DecimalFormat cs = new DecimalFormat("##.00");
 		public static void main(String[] args)
 			{
+				
 				String file1 = "StudentList.txt"; 
 		
 
@@ -24,8 +26,8 @@ public class SIS
 
 	
 	
-fillArray();
-menu();
+				fillArray();
+				menu();
 			
 			}
 		public static void fillArray()
@@ -43,9 +45,10 @@ menu();
 							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
 							
 						}
+					GpaCalculator.Calc();
 					for (Student k : roster)
 						{
-							System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+							System.out.println(k.getFirstName()+ " "+ k.getLastName() + " " + k.getGpa() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 						}
 					
 					
