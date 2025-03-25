@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
@@ -18,8 +19,7 @@ public class SIS
 		public static void main(String[] args)
 			{
 				String file1 = "StudentList.txt"; 
-		
-//hello
+
 				//for loop through get grade use if else to add a certain number to gpa
 				// make a seperate array list for gpa ):
 				// 
@@ -163,5 +163,17 @@ public class SIS
 				}
 			
 		}
+		public static ArrayList<Student> sortByLastName()
+		{
+			ArrayList <String> sorted = new ArrayList <String>();
+			
+			for (int i = 0; i < SIS.roster.size(); i++)
+			{
+//				sorted.add(SIS.roster.next().getLastName());
+			}
+			
+			Collections.sort(sorted);
+			return sorted;
 		
-	
+		
+		}
