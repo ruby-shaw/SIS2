@@ -9,7 +9,6 @@ public class SIS
 	{
 
 	public static ArrayList <Student> roster = new ArrayList <Student>();
-	public static Scanner user= new Scanner (System.in);
 
 
 
@@ -23,7 +22,7 @@ public class SIS
 		static DecimalFormat cs = new DecimalFormat("##.00");
 
 
->
+
 		public static void main(String[] args)
 			{
 				
@@ -131,7 +130,7 @@ public class SIS
 						
 					}	
 				}
-			}
+		}
 
 
 		public static ArrayList<Student> sortByLastName()
@@ -144,7 +143,7 @@ public class SIS
 			}
 			
 			Collections.sort(sorted);
-			return sorted;
+			//return sorted;
 		
 		
 		}

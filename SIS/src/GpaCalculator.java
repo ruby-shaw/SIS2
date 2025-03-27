@@ -14,10 +14,7 @@ public class GpaCalculator
 			
 		for (int i = 0; i<SIS.roster.size();i++)
 			{
-				//if (SIS.roster.get(i).getGrade1().equals("A")|| SIS.roster.get(i).getGrade1().equals("A-")||SIS.roster.get(i).getGrade1().equals("A+"))
-				//	{
-					
-				//	}
+			
 				whatTypeOfGrade1();
 				whatTypeOfGrade2();
 				whatTypeOfGrade3();
