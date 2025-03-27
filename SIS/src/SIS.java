@@ -14,6 +14,7 @@ public class SIS
 
 		static Scanner user= new Scanner (System.in);
 
+	
 		static	double GPA = 0.00;
 
 		static int counter = 0;
@@ -75,7 +76,7 @@ public class SIS
 						}
 					
 					
-					
+				
 					
 				} catch (FileNotFoundException e)
 				{
@@ -130,23 +131,24 @@ public class SIS
 						
 					}	
 				}
-			}
-
-
-		public static ArrayList<Student> sortByLastName()
-		{
-			ArrayList <String> sorted = new ArrayList <String>();
 			
-			for (int i = 0; i < SIS.roster.size(); i++)
-			{
+
+
+//		public static ArrayList<Student> sortByLastName()
+//		{
+//			ArrayList <String> sorted = new ArrayList <String>();
+//			
+//			for (int i = 0; i < SIS.roster.size(); i++)
+//			{
 //				sorted.add(SIS.roster.next().getLastName());
-			}
-			
-			Collections.sort(sorted);
+//			}
+//			
+//			Collections.sort(sorted);
 //			return sorted;
-		
-		
-		}
+//		
+//		
+//		}
+	}
 
 
 	
