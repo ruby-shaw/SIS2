@@ -10,11 +10,6 @@ public class SIS
 
 	public static ArrayList <Student> roster = new ArrayList <Student>();
 	public static Scanner user= new Scanner (System.in);
-
-
-
-		static Scanner user= new Scanner (System.in);
-
 		static	double GPA = 0.00;
 
 		static int counter = 0;
@@ -23,7 +18,7 @@ public class SIS
 		static DecimalFormat cs = new DecimalFormat("##.00");
 
 
->
+
 		public static void main(String[] args)
 			{
 				
@@ -76,7 +71,7 @@ public class SIS
 						}
 					
 					
-					
+				
 					
 				} catch (FileNotFoundException e)
 				{
@@ -131,7 +126,7 @@ public class SIS
 						
 					}	
 				}
-			}
+			
 
 
 		public static ArrayList<Student> sortByLastName()
@@ -148,6 +143,7 @@ public class SIS
 		
 		
 		}
+	}
 
 
 	
