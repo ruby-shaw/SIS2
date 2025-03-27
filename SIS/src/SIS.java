@@ -84,6 +84,7 @@ public class SIS
 
 					{
 						AddOrRemoveStudent.choose();
+						System.out.println();
 						
 					}
 				else if (choice ==2)
