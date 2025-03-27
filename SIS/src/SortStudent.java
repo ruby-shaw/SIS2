@@ -7,12 +7,15 @@ public class SortStudent
 	{
 		ArrayList <Student> sorted = new ArrayList <Student>();
 		
-//		for (int i = 0; i < SIS.roster.size(); i++)
-//		{
-//			sorted.add(SIS.roster.next().getLastName());
-//		}
-//		
+		for(Student s: SIS.roster)
+		{
+			sorted.add(s);
+		}
 		
+		Collections.sort(sorted, new LastNameSort());
 		return sorted;
+
 	}
+	
+	
 }

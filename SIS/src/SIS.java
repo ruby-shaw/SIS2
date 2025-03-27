@@ -40,6 +40,7 @@ public class SIS
 
 				fillArray();
 				menu();
+				SortStudent.sortByLastName();
 
 			
 			}
@@ -80,7 +81,7 @@ public class SIS
 					
 				} catch (FileNotFoundException e)
 				{
-					// TODO Auto-generated catch block
+				
 					e.printStackTrace();
 				}
 		}	
@@ -110,11 +111,17 @@ public class SIS
 						System.out.println("Pick one");
 						System.out.println("1) Sort by last name");
 						System.out.println("2) Sort by GPA");
-						System.out.println("2) Sort by period");
+						System.out.println("3) Sort by period");
 						int sortChoice=user.nextInt();
 						if ( sortChoice==1)
 							{
-								System.out.println("Link last name method");
+								SortStudent.sortByLastName();
+								int classNum =1;
+								for(Student s: SortStudent.sortByLastName())
+								{
+									System.out.println(classNum+" "+ s.getFirstName()+ " "+ s.getLastName() + " " +  s.getGpa()+  " " + s.getPeriod1()+ " "+ s.getGrade1()+ " " + s.getPeriod2()+ " "+ s.getGrade2()+ " " + s.getPeriod3()+ " "+ s.getGrade3());
+									classNum ++;
+								}
 							}
 						else if ( sortChoice==2)
 							{
@@ -132,23 +139,7 @@ public class SIS
 					}	
 				}
 			
-
-
-//		public static ArrayList<Student> sortByLastName()
-//		{
-//			ArrayList <String> sorted = new ArrayList <String>();
-//			
-//			for (int i = 0; i < SIS.roster.size(); i++)
-//			{
-//				sorted.add(SIS.roster.next().getLastName());
-//			}
-//			
-//			Collections.sort(sorted);
-//			return sorted;
-//		
-//		
-//		}
-	}
+		}
 
 
 	
