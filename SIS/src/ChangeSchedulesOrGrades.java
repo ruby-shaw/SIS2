@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ChangeSchedulesOrGrades
@@ -26,6 +27,7 @@ public class ChangeSchedulesOrGrades
 		
 		public static void changeGrade()
 		{
+			System.out.println();
 		System.out.println("Which student's grades would you like to change?");
 		int num=0;
 		for (Student k : SIS.roster)
@@ -92,6 +94,70 @@ public class ChangeSchedulesOrGrades
 		
 		public static void changeSchedule()
 		{
+			System.out.println();
+			System.out.println("Which student's schedule would you like to change?");
+			int num=0;
+			for (Student k : SIS.roster)
+				{
+					num++;
+					System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+				}
+			int p = user.nextInt();
+			p--; 
+			 String pd1;
+			 String pd2;
+			 String pd3; 
+			
+			ArrayList <String> classes = new ArrayList <String>();
+			classes.add("Biology");
+			classes.add("Algrebra");
+			classes.add("English");
+			
+			System.out.println("1) "+ classes.get(0));
+			System.out.println("2) "+ classes.get(1));
+			System.out.println("3) "+ classes.get(2));
+			System.out.println("First Period?");
+			int choice= user.nextInt();
+			choice--;
+			pd1= classes.get(choice);
+			SIS.roster.get(p).setPeriod1(pd1);
+			classes.remove(choice);	
+			
+			
+			
+			System.out.println("Second Period?");
+			System.out.println("1) "+ classes.get(0));
+			System.out.println("2) "+ classes.get(1));
+			choice=user.nextInt();
+			choice--; 
+			pd2= classes.get(choice);
+			SIS.roster.get(p).setPeriod2(pd2);
+			classes.remove(choice);
+			
+			
+			pd3= classes.get(0); 
+			SIS.roster.get(p).setPeriod3(pd3);
+			
+			System.out.println();
+			System.out.println("New Schedule: " + SIS.roster.get(p).getPeriod1() +", "+ SIS.roster.get(p).getPeriod2() +", "+ SIS.roster.get(p).getPeriod3());
+			System.out.println();
+			
+			System.out.println("Would you like to 1) Change another Schedule or 2) Return to menu?");
+			int f= user.nextInt();
+			if (f==1)
+				{
+					changeSchedule();
+				}
+			else if (f==2)
+				{
+					SIS.menu();
+				}
+			else
+				{
+					System.out.println("Error, please try again");
+					f=user.nextInt();
+				}
+			
 			
 		}
 	}
