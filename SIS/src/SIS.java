@@ -96,7 +96,7 @@ public class SIS
 				else if (choice ==2)
 
 					{
-						
+						ChangeSchedulesOrGrades.pick();
 						
 					}
 
