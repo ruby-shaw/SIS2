@@ -79,12 +79,12 @@ public class AddOrRemoveStudent
 			
 			
 			SIS.roster.add(new Student(newFirst, newLast, 0.00, newFirstP, newFirstG, newSecP, newSecG, newThirdP, newThirdG));
-			
+			GpaCalculator.Calc();
 			int num=0;
 			for (Student k : SIS.roster)
 				{
 					num++;
-					System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+					System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " "+  k.getGpa()+  " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 				}
 			SIS.menu();
 			
@@ -96,18 +96,19 @@ public class AddOrRemoveStudent
 			for (Student k : SIS.roster)
 				{
 					num++;
-					System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+					System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " " +  k.getGpa()+  " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 				}
 			System.out.println("Which student would you like to remove?");
 			int choice= user1.nextInt();
 			choice--;
 			SIS.roster.remove(choice);
+			
 			int newNum=0;
 			System.out.println();
 			for (Student k : SIS.roster)
 				{
 					newNum++;
-					System.out.println(newNum+") "+k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+					System.out.println(newNum+") "+k.getFirstName()+ " "+ k.getGpa() +" "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 				}
 			SIS.menu();
 		}

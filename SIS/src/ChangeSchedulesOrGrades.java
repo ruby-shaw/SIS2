@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class ChangeSchedulesOrGrades
 	{
+		
 		public static Scanner user= new Scanner (System.in);
 		public static void pick()
 		{
@@ -27,13 +28,14 @@ public class ChangeSchedulesOrGrades
 		
 		public static void changeGrade()
 		{
+			GpaCalculator.Calc();
 			System.out.println();
 		System.out.println("Which student's grades would you like to change?");
 		int num=0;
 		for (Student k : SIS.roster)
 			{
 				num++;
-				System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+				System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " " +  k.getGpa()+  " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 			}
 		int p = user.nextInt();
 		p--; 
@@ -74,9 +76,15 @@ public class ChangeSchedulesOrGrades
 				c=user.nextInt();
 			}
 		
-		System.out.println("Would you like to 1) Change another grade or 2) Return to Menu?");
+		
+		System.out.println("Would you like to 1) Change another grade of same student, 2) Change another students grades,  or 3) Return to Menu?");
 		int f= user.nextInt();
 		if (f==1)
+			{
+				System.out.println("Please enter number of class you want to edit");
+				c=user.nextInt();
+			}
+		else if (f==2)
 			{
 				changeGrade();
 			}
@@ -89,6 +97,7 @@ public class ChangeSchedulesOrGrades
 				System.out.println("Error, please try again");
 				f=user.nextInt();
 			}
+		
 		
 		}
 		
