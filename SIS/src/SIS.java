@@ -57,14 +57,7 @@ public class SIS
 					Scanner myFile = new Scanner (new File("StudentList.txt"));
 					while(myFile.hasNext())
 						{
-
-
 							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
-							
-
-							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
-
-
 						}
 
 					GpaCalculator.Calc();
@@ -98,6 +91,7 @@ public class SIS
 
 					{
 						AddOrRemoveStudent.choose();
+						System.out.println();
 						
 					}
 				else if (choice ==2)
