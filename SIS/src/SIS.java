@@ -1,24 +1,33 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.text.DecimalFormat;
+
 public class SIS
 	{
 
+	public static ArrayList <Student> roster = new ArrayList <Student>();
+	public static Scanner user= new Scanner (System.in);
+
+
+
 		static Scanner user= new Scanner (System.in);
+
 		static	double GPA = 0.00;
-		static ArrayList <Student> roster = new ArrayList <Student>();
+
 		static int counter = 0;
+
 
 		static DecimalFormat cs = new DecimalFormat("##.00");
 
 
+>
 		public static void main(String[] args)
 			{
 				
 				String file1 = "StudentList.txt"; 
-		
 
 				//for loop through get grade use if else to add a certain number to gpa
 				// make a seperate array list for gpa ):
@@ -28,8 +37,7 @@ public class SIS
 				System.out.println(roster.size());
 			
 
-	
-	
+
 				fillArray();
 				menu();
 
@@ -48,7 +56,12 @@ public class SIS
 					while(myFile.hasNext())
 						{
 
+
 							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
+							
+
+							roster.add(new Student(myFile.next(),myFile.next(),0.00,myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next(),myFile.next()));
+
 
 						}
 
@@ -120,11 +133,26 @@ public class SIS
 				}
 			}
 
-	
+
+		public static ArrayList<Student> sortByLastName()
+		{
+			ArrayList <String> sorted = new ArrayList <String>();
+			
+			for (int i = 0; i < SIS.roster.size(); i++)
+			{
+//				sorted.add(SIS.roster.next().getLastName());
+			}
+			
+			Collections.sort(sorted);
+			return sorted;
 		
+		
+		}
+
 
 	
 			
 		
 
 	
+
