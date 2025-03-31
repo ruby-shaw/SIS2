@@ -23,6 +23,7 @@ public class AddOrRemoveStudent
 		else 
 			{
 				System.out.println("Error, please try again");
+				addOrDeleteChoice=user1.nextInt();
 			}
 	}
 		public static void addStudent()
@@ -79,7 +80,7 @@ public class AddOrRemoveStudent
 			
 			
 			SIS.roster.add(new Student(newFirst, newLast, 0.00, newFirstP, newFirstG, newSecP, newSecG, newThirdP, newThirdG));
-			GpaCalculator.Calc();
+			//GpaCalculator.Calc();
 			int num=0;
 			for (Student k : SIS.roster)
 				{
