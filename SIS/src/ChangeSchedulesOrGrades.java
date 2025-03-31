@@ -76,7 +76,7 @@ public class ChangeSchedulesOrGrades
 				c=user.nextInt();
 			}
 		
-		int changeGPA=0;
+		double changeGPA=0.00;
 		ArrayList <String> calcu = new ArrayList <String>();
 		calcu.add(SIS.roster.get(p).getGrade1());
 		calcu.add(SIS.roster.get(p).getGrade2());
@@ -169,7 +169,7 @@ public class ChangeSchedulesOrGrades
 			for (Student k : SIS.roster)
 				{
 					num++;
-					System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() + " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
+					System.out.println(num+") "+k.getFirstName()+ " "+ k.getLastName() +" "+k.getGpa()+ " " + k.getPeriod1()+ " "+ k.getGrade1()+ " " + k.getPeriod2()+ " "+ k.getGrade2()+ " " + k.getPeriod3()+ " "+ k.getGrade3());
 				}
 			int p = user.nextInt();
 			p--; 
