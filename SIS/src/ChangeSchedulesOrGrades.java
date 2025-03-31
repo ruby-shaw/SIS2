@@ -10,25 +10,25 @@ public class ChangeSchedulesOrGrades
 		System.out.println("Pick one");
 		System.out.println("1) Change grade");
 		System.out.println("2) Change schedule");
-		int changeGradeorSchedule= SIS.user.nextInt();
-		if ( changeGradeorSchedule==1)
+		int changeGrad= SIS.user.nextInt();
+		if ( changeGrad==1)
 			{
 				changeGrade();
 			}
-		else if ( changeGradeorSchedule==2)
+		else if ( changeGrad==2)
 			{
 				changeSchedule();
 			}
 		else
 			{
 				System.out.println("Error, please try again");
-			 changeGradeorSchedule=user.nextInt();
+			 changeGrad=user.nextInt();
 			}
 		}
 		
 		public static void changeGrade()
 		{
-			GpaCalculator.Calc();
+			//GpaCalculator.Calc();
 			System.out.println();
 		System.out.println("Which student's grades would you like to change?");
 		int num=0;
@@ -77,14 +77,9 @@ public class ChangeSchedulesOrGrades
 			}
 		
 		
-		System.out.println("Would you like to 1) Change another grade of same student, 2) Change another students grades,  or 3) Return to Menu?");
+		System.out.println("Would you like to 1) Change another students grades or 2) Return to Menu?");
 		int f= user.nextInt();
-		if (f==1)
-			{
-				System.out.println("Please enter number of class you want to edit");
-				c=user.nextInt();
-			}
-		else if (f==2)
+		if(f==1)
 			{
 				changeGrade();
 			}
