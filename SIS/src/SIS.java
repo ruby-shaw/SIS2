@@ -128,6 +128,7 @@ public class SIS
 							}
 						else if ( sortChoice==3)
 							{
+
 							System.out.println("Which period do you want to sort by?");
 							System.out.println("1) ");
 							System.out.println("2) ");
@@ -144,6 +145,9 @@ public class SIS
 									System.out.println(classNum+" "+ s.getFirstName()+ " "+ s.getLastName() + " " +  s.getGpa()+  " " + s.getPeriod1()+ " "+ s.getGrade1()+ " " + s.getPeriod2()+ " "+ s.getGrade2()+ " " + s.getPeriod3()+ " "+ s.getGrade3());
 									classNum ++;
 								}
+
+								sortByPeriod();
+
 							}
 						else
 							{
