@@ -79,6 +79,7 @@ public class AddOrRemoveStudent
 			newThirdG= user1.next();
 			
 			
+			
 			SIS.roster.add(new Student(newFirst, newLast, 0.00, newFirstP, newFirstG, newSecP, newSecG, newThirdP, newThirdG));
 			//GpaCalculator.Calc();
 			int num=0;
