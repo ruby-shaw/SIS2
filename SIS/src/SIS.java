@@ -33,7 +33,7 @@ public class SIS
 				//for loop through get grade use if else to add a certain number to gpa
 				// make a seperate array list for gpa ):
 				// 
-					System.out.println("HELLOOOOOOOOOO");
+				System.out.println("HELLOOOOOOOOOO");
 
 
 				System.out.println(roster.size());
