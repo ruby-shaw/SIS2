@@ -11,7 +11,7 @@ public class GpaCalculator
 		public static void Calc()
 		{
 			
-			
+			SIS.counter=0;
 		for (int i = 0; i<SIS.roster.size();i++)
 			{
 			
