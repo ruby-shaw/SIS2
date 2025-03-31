@@ -34,8 +34,10 @@ public class SIS
 				// make a seperate array list for gpa ):
 				// 
 				System.out.println("Please workkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
+
+				
 				System.out.println("Please workkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
-			
+
 				System.out.println(roster.size());
 			
 
