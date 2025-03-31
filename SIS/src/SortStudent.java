@@ -17,5 +17,20 @@ public class SortStudent
 
 	}
 	
+	public static ArrayList<Student> sortByPeriod1()
+	{
+		ArrayList <Student> sortedBy1 = new ArrayList <Student>();
+		
+		
+		for(Student s: SIS.roster)
+		{
+			sortedBy1.add(s);
+		}
+		
+		Collections.sort(sortedBy1, new Period1Sort());
+		
+		return sortedBy1;
+	}
+	
 	
 }
