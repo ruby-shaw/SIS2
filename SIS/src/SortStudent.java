@@ -47,5 +47,18 @@ public class SortStudent
 		return sortedBy2;
 	}
 	
-	
+	public static ArrayList<Student> sortByPeriod3()
+	{
+		ArrayList <Student> sortedBy3 = new ArrayList <Student>();
+		
+		
+		for(Student s: SIS.roster)
+		{
+			sortedBy3.add(s);
+		}
+		
+		Collections.sort(sortedBy3, new Period3Sort());
+		
+		return sortedBy3;
+	}
 }
