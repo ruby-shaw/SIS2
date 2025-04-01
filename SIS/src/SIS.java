@@ -36,11 +36,11 @@ public class SIS
 				// 
 
 
+
 				System.out.println(roster.size());
 
-				
-				//System.out.println(roster.size());
 
+				
 			
 				fillArray();
 				menu();

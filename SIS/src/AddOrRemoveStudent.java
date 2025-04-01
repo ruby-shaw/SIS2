@@ -78,8 +78,70 @@ public class AddOrRemoveStudent
 			System.out.println("What is the grade for "+ newThirdP+ "?");
 			newThirdG= user1.next();
 			
+			double changeGPA=0.00; 
+			ArrayList <String> calcu = new ArrayList <String>();
+			calcu.add(newFirstG);
+			calcu.add(newSecG);
+			calcu.add(newThirdG);
 			
-			SIS.roster.add(new Student(newFirst, newLast, 0.00, newFirstP, newFirstG, newSecP, newSecG, newThirdP, newThirdG));
+			for(int i=0; i<calcu.size(); i++)
+				{
+					if(calcu.equals("A+"))
+						{
+							changeGPA+=4.30;
+						}
+					else if(calcu.equals("A"))
+						{
+							changeGPA+=4.00;
+						}
+					else if(calcu.equals("A-"))
+						{
+							changeGPA+=3.70;
+						}
+					else if(calcu.equals("B+"))
+						{
+							changeGPA+=3.30;
+						}
+					else if(calcu.equals("B"))
+						{
+							changeGPA+=3.00;
+						}
+					else if(calcu.equals("B-"))
+						{
+							changeGPA+=2.70;
+						}
+					else if(calcu.equals("C+"))
+						{
+							changeGPA+=2.30;
+						}
+					else if(calcu.equals("C"))
+						{
+							changeGPA+=2.00;
+						}
+					else if(calcu.equals("C-"))
+						{
+							changeGPA+=1.70;
+						}
+					else if(calcu.equals("D+"))
+						{
+							changeGPA+=1.30;
+						}
+					else if(calcu.equals("D"))
+						{
+							changeGPA+=1.00;
+						}
+					else if(calcu.equals("D-"))
+						{
+							changeGPA+=0.70;
+						}
+					else if(calcu.equals("F"))
+						{
+							changeGPA+=0.00;
+						}
+					changeGPA=changeGPA/3; 
+					
+			
+			SIS.roster.add(new Student(newFirst, newLast, changeGPA, newFirstP, newFirstG, newSecP, newSecG, newThirdP, newThirdG));
 			//GpaCalculator.Calc();
 			int num=0;
 			for (Student k : SIS.roster)
