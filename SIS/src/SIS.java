@@ -150,7 +150,7 @@ public class SIS
 							}
 						else
 							{
-								System.out.println("Error, please try again");
+								System.out.println("Error, please try againn");
 								menu();
 							}
 						
